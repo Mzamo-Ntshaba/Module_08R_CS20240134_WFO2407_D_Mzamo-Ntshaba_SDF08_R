@@ -6,48 +6,86 @@
     <title>Footer Example</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <footer class="bg-[#659f8f] dark:bg-[#313131]">
-        <div class="container">
-            <footer class="bg-[#659f8f] dark:bg-[#313131]">
-                <div class="container px-6 py-12 mx-auto">
-                    <div class="grid">
-                        <div class="sm:col-span-2">
-                            <h1 class="max-w-lg" >Subscribe.</h1>
-                            <div class="flex">
-                                <input id="email" type="text">
-                                <button class="w-full px-6 py-2.5 bg-white">
-                                    Subscribe
-                                </button>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[#313131]">Quick Link</p>
-                            <div class="flex">
-                                <a href="#">Home</a>
-                                <a href="#">Who We Are</a>
-                                <a href="#">Our Philosophy</a>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-[#313131]">Technologies</p>
-                            <div class="">
-                                <a href="#">HTML</a>
-                                <a href="#">CSS</a>
-                                <a href="#">JavaScript</a>
-                            </div>
-                        </div>
+    <!-- Footer container -->
+    <footer class="bg-teal-600 dark:bg-gray-800">
+        <!-- Container for padding and centering content -->
+        <div class="container px-6 py-12 mx-auto">
+            <!-- Grid layout for organizing footer content into sections -->
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
+                
+                <!-- Subscription Section: Promotes newsletter signup -->
+                <div class="sm:col-span-2">
+                    <!-- Heading for the subscription section with responsive text size and color -->
+                    <h1 class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">
+                        Subscribe to our newsletter for updates.
+                    </h1>
+                    <!-- Flexbox container for email input and subscribe button -->
+                    <div class="flex flex-col mx-auto mt-6 gap-4 sm:flex-row sm:items-center sm:gap-4 md:space-y-0">
+                        <!-- Email input field with styling for borders, text, and focus states -->
+                        <input id="email" type="email" placeholder="Email Address" class="px-4 py-2 text-gray-800 bg-white border rounded-md dark:bg-gray-800 dark:text-white dark:border-gray-800 focus:border-orange-400 dark:focus:border-orange-400 focus:outline-none">
+                        <!-- Subscribe button with increased visibility -->
+                        <button class="w-full px-6 py-2.5 bg-orange-500 text-white tracking-wide border-0 rounded-md font-semibold text-lg shadow-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300 sm:mt-0 sm:w-auto">
+                            Subscribe
+                        </button>
                     </div>
-                    
-                    <hr class="my-6 border-[#d86943]">
-                    
-                    <div class="flex">
-                        <a href="#">
-                            <img class="w-auto h-7" src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="">
-                        </a>
-                    </div>
-    </footer>
+                </div>
 
+                <!-- Quick Links Section: Provides navigation to key pages -->
+                <div>
+                    <!-- Section title with font weight and margin-bottom -->
+                    <p class="text-gray-800 font-bold mb-4">Quick Link</p>
+                    <!-- List of links styled for readability and interaction -->
+                    <div class="flex flex-col items-start gap-1">
+                        <!-- Individual links with hover and focus effects for better accessibility -->
+                        <a href="#" class="text-gray-800 hover:underline focus:underline focus:text-white">Home</a>
+                        <a href="#" class="text-gray-800 hover:underline focus:underline focus:text-white">Who We Are</a>
+                        <a href="#" class="text-gray-800 hover:underline focus:underline focus:text-white">Our Philosophy</a>
+                    </div>
+                </div>
+
+                <!-- Technologies Section: Lists technologies used -->
+                <div>
+                    <!-- Section title with font weight and margin-bottom -->
+                    <p class="text-gray-800 font-bold mb-4">Technologies</p>
+                    <!-- List of technologies styled for readability and interaction -->
+                    <div class="flex flex-col items-start gap-1">
+                        <!-- Individual links with hover and focus effects for better accessibility -->
+                        <a href="#" class="text-gray-800 hover:underline focus:underline focus:text-white">HTML</a>
+                        <a href="#" class="text-gray-800 hover:underline focus:underline focus:text-white">CSS</a>
+                        <a href="#" class="text-gray-800 hover:underline focus:underline focus:text-white">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider between sections with a border color matching the theme -->
+            <hr class="my-6 border-orange-400 dark:border-orange-350">
+
+            <!-- Footer bottom section: Contains logo and social media icons -->
+            <div class="flex flex-col gap-6 items-start justify-between">
+                <!-- Logo with appropriate alt text for accessibility -->
+                <a href="#">
+                    <img class="w-auto h-7" src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="Company Logo">
+                </a>
+                <!-- Social media icons with hover effects and aria-labels for accessibility -->
+                <div class="flex gap-6">
+                    <!-- Instagram icon -->
+                    <a href="http://instagram.com/codespaceza" class="text-white text-xl hover:text-orange-500" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <!-- Github icon -->
+                    <a href="https://www.github.com/codespace-academy" class="text-white text-xl hover:text-orange-500" aria-label="Github">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    <!-- LinkedIn icon -->
+                    <a href="https://www.linkedin.com/school/codespaceza/" class="text-white text-xl hover:text-orange-500" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
